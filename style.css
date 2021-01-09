@@ -1,0 +1,27 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: rgb(118, 118, 118);
+}
+
+header {
+    background: black;
+    height: 55px;
+}
+
+header .logo{
+    float: left;
+    height: inherit;
+}
+
+header .logo-txt {
+    margin: 10px;
+}
+
+header ul {
+    float: right;
+}
+
+header * {
+    color: green
+}
