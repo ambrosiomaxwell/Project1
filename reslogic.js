@@ -4,6 +4,26 @@
 
 // Header Buttons
 
+var headButton = $(".topnav");
+
+var buttonHead1 = $("<button>");
+var buttonLink1 = $("<a>");
+buttonHead1.attr("type","submit");
+buttonHead1.text("Homepage");
+buttonLink1.attr({"class":"active", "href":"#main.html"});
+headButton.append(buttonHead1);
+buttonHead1.append(buttonLink1);
+
+var buttonHead2 = $("<button>");
+var buttonLink2 = $("<a>");
+buttonHead2.attr("type","submit");
+buttonHead2.text("Menu");
+buttonLink2.attr({"class":"active", "href":"#menu.html"});
+headButton.append(buttonHead2);
+buttonHead2.append(buttonLink2);
+
+
+
 
 
 
@@ -16,7 +36,7 @@ $(".enterbutton").on("click", function(){
 
 var currencyAmount = localStorage.getItem("currency");
 
-APIKey = ""
+APIKey = "";
 
 findTheCurrency();
 
