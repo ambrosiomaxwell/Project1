@@ -4,19 +4,34 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
+.title{
+    border: solid;
+    border-color: #008CBA;
+    border-width: 1px;
+}
+
 h1{
     text-align: center;
-    padding: 30px;
+    padding: 40px;
+}
+
+.infoareaone{
+    margin:auto;
+}
+
+.infoareatwo{
+    margin:auto;
 }
 
 .email{
     border-style: solid;
 }
 
+
 textarea{
-    margin: auto;
     height: 60px;
 }
+
 
 .enterbutton{
     text-align: center;
@@ -24,22 +39,22 @@ textarea{
     height: 60px;
     background-color: #008CBA;
     color: white;
-    padding: 0px 24px;
+    padding: 0px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    display: block;
 }
 
 .returnbutton{
+    text-align: center;
     font-size: 18px;
+    height: 60px;
     background-color: #008CBA;
     color: white;
-    padding: 0px 32px;
+    padding: 0px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    display: block;
 }
 
 
