@@ -62,3 +62,43 @@ header ul li {
 header * {
     color: green
 }
+
+header .menu-toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 870px) {
+    header ul {
+        width: 100%;
+        background: rgb(191, 208, 208);
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li ul {
+        position: static;
+        display: block;
+        width: 100%;
+    }
+
+    header ul li ul li a {
+        padding: 10px;
+        color:rgb(118, 118, 118);
+        background: white;
+        padding-left: 30px;
+    }
+
+    header .menu-toggle {
+        display: block;
+
+    }
+
+
+
+
+}
