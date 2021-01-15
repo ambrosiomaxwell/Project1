@@ -30,11 +30,17 @@ console.log(items[1].cost);
 var addCost = items[0].cost + items[1].cost
 console.log(addCost);
 
+//Building menu
+
+
+
+
+
 // building html from object in items of cart //
 
 var cartBuild = $(".cartItems"); // Div for cart items start
 
-headingCart = $("<h1>");
+headingCart = $("<h3>");
 headingCart.attr("class", "cartHeading");
 headingCart.text("The following items have been added to your cart")
 cartBuild.append(headingCart);
@@ -85,6 +91,11 @@ var currencyAmount = localStorage.getItem("cost1")
 APIKey = "44872a8125c54b61a87af8a492745d21";
 
 findTheCurrency();
+
+
+costButton = $(".costButtons"); // Div for Cost Buttons
+
+finalHeading = $(".headingFinal"); // Div for final cost
 
 
 
@@ -138,50 +149,60 @@ function findTheCurrency(){
         //Swiss Franc
         yourChargeCHF = rate6 * currencyAmount;
         chfRate = yourChargeCHF.toFixed(2);
+
+        rateArray = [zarRate,eurRate,yenRate,gbpRate,chfRate];
+        console.log(rateArray);
     
 
-        costButton = $(".costButtons") // Div for Cost Buttons
+        //costButton = $(".costButtons"); // Div for Cost Buttons
 
-        paymentPref = $("<h3>");
-        paymentPref.attr("class", "paymentPref");
-        paymentPref.text("What is your preferred currency to pay with?");
-        costButton.append(paymentPref);
+        //div for clickable
+
+        buttonArea = $(".buttonarea");
+
+        
+
+
+        // paymentPref = $("<h3>");
+        // paymentPref.attr("class", "paymentPref");
+        // paymentPref.text("What is your preferred currency to pay with?");
+        // costButton.append(paymentPref);
         
         //creating button for canadian dollar
         var button1 = $("<button>");
-        button1.attr({"type":"submit", "class":"cadButton"});
+        button1.attr({"type":"submit", "class":"cadButton currencybuttons"});
         button1.text("Canadian Dollars (CAD)"); // canadian dollars
-        costButton.append(button1);
+        buttonArea.append(button1);
 
         //creating button for south african dollar
         var button2 = $("<button>");
-        button2.attr({"type":"submit", "class":"zarButton"});
+        button2.attr({"type":"submit", "class":"zarButton currencybuttons"});
         button2.text("South African Rand (ZAR)"); // south african dollars
-        costButton.append(button2);
+        buttonArea.append(button2);
 
         //creating button for euro
         var button3 = $("<button>");
-        button3.attr({"type":"submit", "class":"eurButton"});
+        button3.attr({"type":"submit", "class":"eurButton currencybuttons"});
         button3.text("Euro (EUR)"); // euros
-        costButton.append(button3);
+        buttonArea.append(button3);
 
         //creating button for yen
         var button4 = $("<button>");
-        button4.attr({"type":"submit", "class":"yenButton"});
+        button4.attr({"type":"submit", "class":"yenButton currencybuttons"});
         button4.text("Japanese Yen (YEN)"); // japanese yen
-        costButton.append(button4);
+        buttonArea.append(button4);
 
         //creating button for GBP
         var button5 = $("<button>");
-        button5.attr({"type":"submit", "class":"gbpButton"});
+        button5.attr({"type":"submit", "class":"gbpButton currencybuttons"});
         button5.text("British Pound (GBP)"); // british pound
-        costButton.append(button5);
+        buttonArea.append(button5);
 
         //creating button for CHF
         var button6 = $("<button>");
-        button6.attr({"type":"submit", "class":"chfButton"});
+        button6.attr({"type":"submit", "class":"chfButton currencybuttons"});
         button6.text("Swiss Franc (CHF)"); // swiss franc
-        costButton.append(button6);
+        buttonArea.append(button6);
 
         // canadian button click event
 
@@ -189,8 +210,7 @@ function findTheCurrency(){
             var cadCost = $("<h1>");
             cadCost.text("Your final Order Cost is: " + cadRate +" CAD Canadian Dollars");
             cadCost.attr("class", "cadcost")
-            costButton.empty();
-            costButton.prepend(cadCost);
+            costButton.append(cadCost);
         
         });
 
@@ -199,9 +219,8 @@ function findTheCurrency(){
         $(".zarButton").on("click", function(){
             var zarCost = $("<h1>");
             zarCost.text("Your final Order Cost is: " + zarRate +" South African Rand");
-            zarCost.attr("class", "zarcost")
-            costButton.empty();
-            costButton.prepend(zarCost);
+            zarCost.attr("class", "zarcost");
+            costButton.append(zarCost);
         
         });
 
@@ -211,7 +230,7 @@ function findTheCurrency(){
             var eurCost = $("<h1>");
             eurCost.text("Your final Order Cost is: " + eurRate +" Euros");
             eurCost.attr("class", "eurcost")
-            costButton.prepend(eurCost);
+            costButton.append(eurCost);
         });
 
         // YEN cost click event
@@ -220,7 +239,7 @@ function findTheCurrency(){
             var yenCost = $("<h1>");
             yenCost.text("Your final Order Cost is: " + yenRate +" YEN");
             yenCost.attr("class", "yencost")
-            costButton.prepend(yenCost);
+            costButton.append(yenCost);
         });
 
         // GBP Cost Click Event
@@ -229,7 +248,7 @@ function findTheCurrency(){
             var gbpCost = $("<h1>");
             gbpCost.text("Your final Order Cost is: " + gbpRate +" GBP");
             gbpCost.attr("class", "gbpcost")
-            costButton.prepend(gbpCost);
+            costButton.append(gbpCost);
         });
 
         // CHF Swiss Franc Cost Event
@@ -237,9 +256,14 @@ function findTheCurrency(){
         $(".chfButton").on("click", function(){
             var chfCost = $("<h1>");
             chfCost.text("Your final Order Cost is: " + chfRate +" CHF");
-            chfCost.attr("class", "gbpcost")
-            costButton.prepend(chfCost);
-        });       
+            chfCost.attr("class", "gbpcost");
+            costButton.append(chfCost);
+        });
+
+
+        // for (var i=0; i<6; i++){
+
+        // }
 
     });
 

@@ -1,13 +1,13 @@
 body{
     display:block;
     /*background-color: rgb(241, 245, 247);*/
-    background-color: rgb(118, 118, 118);
+    background-color: rgb(231, 225, 225);
     font-family: 'Times New Roman', Times, serif;
 }
 
 .title{
     border: solid;
-    border-color: #008CBA;
+    border-color: green;
     border-width: 1px;
 }
 
@@ -56,6 +56,15 @@ textarea{
     text-align: center;
     text-decoration: none;
     display: block;
+}
+
+.currencybuttons{
+    background-color: rgb(72, 245, 72);
+    width: 100%;
+}
+
+.headingButtons{
+    text-align: center;
 }
 
 

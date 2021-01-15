@@ -16,86 +16,27 @@
     <body>
         <!---Navbar-->
         <div class = "topnav">
-            <!----
 
-
-            <a class="active" href="#mainpage">Home</a>
-            <a href="#orderpage">Order Page</a>
-            <a href="#menupage">Menu Page</a>
-            <a href="#locations">Our Location</a>
-            <a href="#signin">Sign In</a>
-
-            --->
         </div>
 
         <!---Page Title-->
 
         <h1 class="title">Bits 'n' Bytes Order Checkout</h1>
 
+        <!---Aside for Buttons-->
+        <div class = "container-fluid">
+            <div class = "row">
+                <aside class = "col-md-3 buttonarea">
+                    <h6 class="headingButtons">Please Choose a Currency</h1>
+                <div class = "col-md-9 menuitems"></div>
+            </div>
+        </div>
+
         <!----Cart for items-->
 
-        <div class = "cartItems"></div>
-
-        <!---Div for Email Entry Row-->
-        <div class = "container enterinfo">
-            <div class="row">
-                <div class="firstspace"></div>
-                <textarea id="emailtext" name="emailentry" rows="4" cols="60" class="email-text col-md-2" placeholder="Enter Email"></textarea>
-                <button type="submit" textarea="emailtext" class="enterbutton button-email col-md-2">Enter E-mail</button>
-            </div>
-            <div class="row">
-                <textarea id="phonetext" name="phoneentry" rows="4" cols="60" class="phone-text col-md-2" placeholder="Enter Phone Number"></textarea>
-                <button type="submit" textarea="phonetext" class="enterbutton button-phone col-md-2">Enter Phone Number</button>
-            </div>
-        </div>
-        <!--
-        <div class="infoareaone container">
-            <div class="row">
-                <textarea id="emailtext" name="emailentry" rows="4" cols="60" class="email-text col-md-10" placeholder="Enter Email"></textarea>
-                <button type="submit" textarea="emailtext" class="enterbutton button-email col-md-12">Enter E-mail</button>
-            </div>
-        <br>
-
-        <!-Div for Phone Number Entry--
-        <div class="infoareatwo container">
-            <div class="row">
-                <textarea id="phonetext" name="phoneentry" rows="4" cols="60" class="phone-text col-md-10" placeholder="Enter Phone Number"></textarea>
-                <button type="submit" textarea="phonetext" class="enterbutton button-phone col-md-12">Enter Phone Number</button>
-            </div>
-        </div>
-        <br>
-
-         -->
-
-        <!----Buttons to go back to other pages-->
-        <div class="buttonarea container">
-            <div class="row">
-                <div class="spacingone col-md-1"></div>
-                <button class="returnbutton button-homepage col-md-2">Homepage</button>
-                <button class="returnbutton button-orderpage col-md-1">Menu Order Page</button>
-                <div class="spacingtwo col-md-1"></div>
-            </div>
-        </div>
-
-        <div class="costButtons">
-            <!-----Adding buttons for costs here-->
-
-
-
-
-        </div>
-
-        <!----Footer --->
-        <!---Using Same setup as Main html Page-
-
-        <div class = "footer">
-            <div class ="footer-content">
-                <div class="footer-section about">Go to Homepage</div>
-                <div class="footer-section links">Return to Menu Page</div>
-                <div class="footer-section contactForm">View Final</div>
-            </div>
-        </div>
-        --->
+        <div class = "container cartItems"></div>
+        
+        <div class="container-fluid costButtons"></div>
         
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
