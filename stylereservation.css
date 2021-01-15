@@ -67,6 +67,11 @@ textarea{
     text-align: center;
 }
 
+.menuitems{
+    background-color: white;
+    border-style:solid;
+    color: rgb(7, 87, 7);
+}
 
 
 

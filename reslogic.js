@@ -12,7 +12,7 @@ var items = [{
     cost: 9
     },
     {
-    meal:'burger',
+    meal:'Burger',
     selection:['pickles','ketchup'],
     cost: 10
 
@@ -21,15 +21,21 @@ var items = [{
 console.log(items[0].meal);
 console.log(items[1].cost);
 
-// var cartCost = ["10", "9", "20", "40"];
+//Building menu for orders for checkout
 
-// var cartSum = cartCost[0]+cartCost[1]+cartCost[2]+cartCost[3];
+menuItems = $(".menuitems");
 
-var addCost = items[0].cost + items[1].cost
-console.log(addCost);
+var mealOne = $("<h4>");
+mealOne.attr("class", "mealone")
+mealOne.text(items[0].meal)
+//mealOneSide.attr("class", "mealoneside")
+//mealOneSide.text("")
+menuItems.append(mealOne);
 
-//Building menu
-
+var mealTwo = $("<h4>");
+mealTwo.attr("class", "mealtwo");
+mealTwo.text(items[1].meal);
+menuItems.append(mealTwo);
 
 
 
@@ -95,6 +101,7 @@ finalHeading = $(".headingFinal"); // Div for final cost
 
 
 
+
 // URL for latest rates from USD
 function findTheCurrency(){
     
@@ -147,7 +154,27 @@ function findTheCurrency(){
         chfRate = yourChargeCHF.toFixed(2);
 
         rateArray = [zarRate,eurRate,yenRate,gbpRate,chfRate];
-        console.log(rateArray);
+
+        buttonAttributes = [{"type":"submit", "class":"cadButton currencybuttons"},
+        {"type":"submit", "class":"zarButton currencybuttons"},
+        {"type":"submit", "class":"eurButton currencybuttons"},
+        {"type":"submit", "class":"yenButton currencybuttons"},
+        {"type":"submit", "class":"gbpButton currencybuttons"},
+        {"type":"submit", "class":"chfButton currencybuttons"}]
+
+        textButtons = ["Canadian Dollars (CAD)","South African Rand (ZAR)",
+        "Euro (EUR)","Japanese Yen (YEN)","British Pound (GBP)",
+        "Swiss Franc (CHF)"]
+
+        buttonArea = $(".buttonarea");
+
+        for (var i=0; i<6; i++){
+            buttonBTN = $("<button>");
+            buttonBTN.attr(buttonAttributes[i]);
+            buttonBTN.text(textButtons[i]);
+            buttonArea.append(buttonBTN);
+
+        }
     
 
         //costButton = $(".costButtons"); // Div for Cost Buttons
@@ -165,40 +192,40 @@ function findTheCurrency(){
         // costButton.append(paymentPref);
         
         //creating button for canadian dollar
-        var button1 = $("<button>");
-        button1.attr({"type":"submit", "class":"cadButton currencybuttons"});
-        button1.text("Canadian Dollars (CAD)"); // canadian dollars
-        buttonArea.append(button1);
+        // var button1 = $("<button>");
+        // button1.attr({"type":"submit", "class":"cadButton currencybuttons"});
+        // button1.text("Canadian Dollars (CAD)"); // canadian dollars
+        // buttonArea.append(button1);
 
-        //creating button for south african dollar
-        var button2 = $("<button>");
-        button2.attr({"type":"submit", "class":"zarButton currencybuttons"});
-        button2.text("South African Rand (ZAR)"); // south african dollars
-        buttonArea.append(button2);
+        // //creating button for south african dollar
+        // var button2 = $("<button>");
+        // button2.attr({"type":"submit", "class":"zarButton currencybuttons"});
+        // button2.text("South African Rand (ZAR)"); // south african dollars
+        // buttonArea.append(button2);
 
-        //creating button for euro
-        var button3 = $("<button>");
-        button3.attr({"type":"submit", "class":"eurButton currencybuttons"});
-        button3.text("Euro (EUR)"); // euros
-        buttonArea.append(button3);
+        // //creating button for euro
+        // var button3 = $("<button>");
+        // button3.attr({"type":"submit", "class":"eurButton currencybuttons"});
+        // button3.text("Euro (EUR)"); // euros
+        // buttonArea.append(button3);
 
-        //creating button for yen
-        var button4 = $("<button>");
-        button4.attr({"type":"submit", "class":"yenButton currencybuttons"});
-        button4.text("Japanese Yen (YEN)"); // japanese yen
-        buttonArea.append(button4);
+        // //creating button for yen
+        // var button4 = $("<button>");
+        // button4.attr({"type":"submit", "class":"yenButton currencybuttons"});
+        // button4.text("Japanese Yen (YEN)"); // japanese yen
+        // buttonArea.append(button4);
 
-        //creating button for GBP
-        var button5 = $("<button>");
-        button5.attr({"type":"submit", "class":"gbpButton currencybuttons"});
-        button5.text("British Pound (GBP)"); // british pound
-        buttonArea.append(button5);
+        // //creating button for GBP
+        // var button5 = $("<button>");
+        // button5.attr({"type":"submit", "class":"gbpButton currencybuttons"});
+        // button5.text("British Pound (GBP)"); // british pound
+        // buttonArea.append(button5);
 
-        //creating button for CHF
-        var button6 = $("<button>");
-        button6.attr({"type":"submit", "class":"chfButton currencybuttons"});
-        button6.text("Swiss Franc (CHF)"); // swiss franc
-        buttonArea.append(button6);
+        // //creating button for CHF
+        // var button6 = $("<button>");
+        // button6.attr({"type":"submit", "class":"chfButton currencybuttons"});
+        // button6.text("Swiss Franc (CHF)"); // swiss franc
+        // buttonArea.append(button6);
 
         // canadian button click event
 
@@ -255,11 +282,6 @@ function findTheCurrency(){
             chfCost.attr("class", "gbpcost");
             costButton.append(chfCost);
         });
-
-
-        // for (var i=0; i<6; i++){
-
-        // }
 
     });
 
