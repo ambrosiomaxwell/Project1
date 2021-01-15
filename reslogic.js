@@ -4,8 +4,6 @@
 
 // Header Buttons
 
-APIKey = "";
-
 //Building object for cart
 
 var items = [{
@@ -88,8 +86,6 @@ buttonHead2.append(buttonLink2);
 //taking from a new source variable 
 var currencyAmount = localStorage.getItem("cost1")
 
-APIKey = "44872a8125c54b61a87af8a492745d21";
-
 findTheCurrency();
 
 
@@ -102,7 +98,7 @@ finalHeading = $(".headingFinal"); // Div for final cost
 // URL for latest rates from USD
 function findTheCurrency(){
     
-    var currencyURL = "https://openexchangerates.org/api/latest.json?app_id=44872a8125c54b61a87af8a492745d21";
+    var currencyURL = "https://openexchangerates.org/api/latest.json?app_id=";
     
     $.ajax({
         url: currencyURL,
