@@ -1,0 +1,48 @@
+body{
+    display:block;
+    background-color: rgb(241, 245, 247);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    padding: 30px;
+}
+
+.email{
+    border-style: solid;
+}
+
+textarea{
+    margin: auto;
+    height: 60px;
+}
+
+.enterbutton{
+    text-align: center;
+    font-size: 18px;
+    height: 60px;
+    background-color: #008CBA;
+    color: white;
+    padding: 0px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.returnbutton{
+    font-size: 18px;
+    background-color: #008CBA;
+    color: white;
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
+
+
