@@ -1,5 +1,6 @@
 body{
     display:block;
+
     /*background-color: rgb(241, 245, 247);*/
     background-color: rgb(231, 225, 225);
     font-family: 'Times New Roman', Times, serif;
@@ -22,6 +23,15 @@ h1{
 
 .infoareatwo{
     margin:auto;
+
+    background-color: rgb(241, 245, 247);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+    padding: 30px;
+
 }
 
 .email{
@@ -29,7 +39,15 @@ h1{
 }
 
 
+
 textarea{
+    height: 60px;
+}
+
+
+
+textarea{
+    margin: auto;
     height: 60px;
 }
 
@@ -40,6 +58,7 @@ textarea{
     height: 60px;
     background-color: #008CBA;
     color: white;
+
     padding: 0px 20px;
     text-align: center;
     text-decoration: none;
@@ -72,6 +91,25 @@ textarea{
     border-style:solid;
     color: rgb(7, 87, 7);
 }
+
+    padding: 0px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.returnbutton{
+    font-size: 18px;
+    background-color: #008CBA;
+    color: white;
+    padding: 0px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
 
 
 
