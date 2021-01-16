@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang = "en-us">
-    <header>
+    <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X UA-Compatable" content="ie=edge">
@@ -13,31 +13,23 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="stylereservation.css">
 
-
-
-    </header>
+    </head>
 
     <body>
-
 
         <!-- // Nav Bar -->
         <div class="logo">
             <h1 class = "logo-txt"><span>That Jamacian Sigma</h1>
         </div>
+        <!---removing header content
+        <div class = "headercontent"></div>
             <i class="fas fa-bars menu-toggle" ></i>
-            <ul class="nav">
-                <li>
-                    <a href="#home" i class="fas fa-house-user"> Home</a> </li>
-                <li><a href="#menu" i class="fas fa-drumstick-bite"> Menu</a></li>
-                <li><a href="#order" i class="fas fa-desktop"> Virtual Ordering </a>
-                    <ul>
-                        <li><a href="#">Dine In Reservations</a></li>
-                        <li><a href="#">Carry-Out</a></li>
-                    </ul>
-                </li>
-                <li><a href="#locations"i class="fas fa-map"> Where To Find Us</a></li>
-                <li><a href="#signIn" i class="fas fa-user-circle"> Sign In</a></li>
+            <ul class="nav"> 
+                <li><a href="index.html" i class="fas fa-house-user"> Home</a></li>
+                <li><a href="menu.html" i class="fas fa-drumstick-bite">Menu</a></li>
+                <li><a href="reservations.html" i class="fas fa-desktop">Virtual Ordering</a></li>
             </ul>
+        --->
 
         <!---Navbar-->
         <div class = "topnav">
@@ -47,8 +39,7 @@
         <!---Page Title-->
 
         <h1 class="title">Bits 'n' Bytes Order Checkout</h1>
-
-        
+                
 
         <!---Aside for Buttons-->
         <div class = "container-fluid">
@@ -63,35 +54,31 @@
         </div>
 
       
+        <div class = "container cartItems">
+            <!----Cart for items-->
 
-        <div class = "container cartItems"></div>
-             <!----Cart for items-->
-
-        
-
-        <!---Area for final cost-->
+        </div>
         
         <div class="container-fluid costButtons"></div>
             <!---Area for final cost-->
-
-            <a class="active" href="#mainpage">Home</a>
-            <a href="#orderpage">Order Page</a>
-            <a href="#menupage">Menu Page</a>
-            <a href="#locations">Our Location</a>
-            <a href="#signin">Sign In</a>
         </div>
         
-        <div class="nextApp"> </div>
+        <div class="nextApp">
+            <div class="row nextAppRow"></div>
+            <div class="areaforjoke col-md-12"></div>
+        </div>
 
         <!-- Footer-->
 
-        <div class="footer">
+        <div class="footer linkstoPages">
             <div class="footer-content">
                 <div class="footer-section about"></div>
                 <div class="footer-section social media"></div>
                 <div class="footer-section form"></div>
-                <a href="main.html">Main html</a>
-                <a href="menu.html">Menu html</a>
+                <a class="active" href="#mainpage">Home</a>
+                <a href="menu.html">Order Page</a>
+                <a href="menu.html">Menu Page</a>
+                <a href="index.html">Our Location</a>
             </div>
 
             <div class="footer-bottom">
