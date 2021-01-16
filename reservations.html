@@ -4,9 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X UA-Compatable" content="ie=edge">
+
         <link rel="stylesheet" type="text/css" href="./style.css">
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="stylereservation.css">
+
+
+
     </header>
+
     <body>
+
 
         <!-- // Nav Bar -->
         <div class="logo">
@@ -26,19 +38,86 @@
                 <li><a href="#locations"i class="fas fa-map"> Where To Find Us</a></li>
                 <li><a href="#signIn" i class="fas fa-user-circle"> Sign In</a></li>
             </ul>
+
+        <!---Navbar-->
+        <div class = "topnav">
+
+        </div>
+
+        <!---Page Title-->
+
+        <h1 class="title">Bits 'n' Bytes Order Checkout</h1>
+
+        <!---Aside for Buttons-->
+        <div class = "container-fluid">
+            <div class = "row">
+                <aside class = "col-md-3 buttonarea">
+                    <h6 class="headingButtons">Not in USD? We accept the following currency payments</h1>
+                </aside>
+                <div class = "col-md-9 menuitems">
+                    <!---add all menu items-->
+                </div>
+            </div>
+        </div>
+
+        <!----Cart for items-->
+
+        <div class = "container cartItems"></div>
+        
+        <div class="container-fluid costButtons"></div>
+
+            <a class="active" href="#mainpage">Home</a>
+            <a href="#orderpage">Order Page</a>
+            <a href="#menupage">Menu Page</a>
+            <a href="#locations">Our Location</a>
+            <a href="#signin">Sign In</a>
+        </div>
+
+        <!---Page Title-->
+
+
         <h1 class="title">Reservations</h1>
-        <div class="info-one">
-            <div class="email">Enter E-mail</div>
-            <textarea class="email-text">Enter Email Here</textarea>
-            <button type="submit" class="button-email">Click to Save E-mail</button>
+
+        <!---Div for Email Entry Row-->
+        <div class="infoareaone container">
+            <div class="row">
+                <div class="leftspacingemail col-md-1"></div>
+                <textarea id="emailtext" name="emailentry" rows="4" cols="60" class="email-text col-md-8" placeholder="Enter Email"></textarea>
+                <button type="submit" textarea="emailtext" class="enterbutton button-email col-md-3">Enter E-mail</button>
+            </div>
+        <br>
+
+        <!---Div for Phone Number Entry-->
+        <div class="infoareatwo container">
+            <div class="row">
+                <div class="leftspacingphone col-md-1"></div>
+                <textarea id="phonetext" name="phoneentry" rows="4" cols="60" class="phone-text col-md-8" placeholder="Enter Phone Number"></textarea>
+                <button type="submit" textarea="phonetext" class="enterbutton button-phone col-md-3">Enter Phone Number</button>
+            </div>
         </div>
-        <div class="info-two">
-            <div class="phonenumber">Phone Number</div>
-            <textarea class="phone-text">Enter Phone Number Here</textarea>
-            <button type="submit" class="button-phone">Click to save phone number</button>
+        <br>
+
+        <!----Buttons to go back to other pages-->
+        <div class="buttonarea container">
+            <div class="row">
+                <button class="returnbutton button-homepage col-md-5">Homepage</button>
+                <div class="buttonspace col-md-2"></div>
+                <button class="returnbutton button-orderpage col-md-5">Menu Order Page</button>
+            </div>
         </div>
-        <button class="homepage">Homepage</button>
-        <button class="orderpage">Menu Order Page</button>
+
+        <!----Footer -->
+        <!---Using Same setup as Main html Page-->
+
+        <div class = "footer">
+            <div class ="footer-content">
+                <div class="footer-section about"></div>
+                <div class="footer-section links"></div>
+                <div class="footer-section contactForm"></div>
+            </div>
+        </div>
+
+        
 
         <!-- Footer-->
 
@@ -56,5 +135,7 @@
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript"></script>
+        <script src="reslogic.js"></script>
+        
     </body>
 </html>
