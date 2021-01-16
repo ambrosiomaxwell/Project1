@@ -1,3 +1,106 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: rgb(118, 118, 118);
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background: black;
+    height: 55px;
+}
+
+header .logo{
+    float: left;
+    height: inherit;
+}
+
+header .logo-txt {
+    font-family: 'Lato', sans-serif;;
+    margin: 10px;
+}
+
+
+header ul {
+    float: right;
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    font-size: 1.0em;
+    
+}
+
+header ul li ul {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 180px;
+    display: none;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li a:hover {
+    background:rgb(48, 48, 48);
+    transition: 1s;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+    
+}
+
+header * {
+    color: teal
+}
+
+header .menu-toggle {
+    display: none;
+}
+
+
+@media only screen and (max-width: 870px) {
+    header ul {
+        width: 100%;
+        background: rgb(191, 208, 208);
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li ul {
+        position: static;
+        display: block;
+        width: 100%;
+    }
+
+    header ul li ul li a {
+        padding: 10px;
+        color:rgb(118, 118, 118);
+        background: white;
+        padding-left: 30px;
+    }
+
+    header .menu-toggle {
+        display: block;
+
+    }
+
+}
+
+
 #menu-container{
     color:white;
 }

@@ -1,10 +1,5 @@
-// testing logic through e-mail link.
 
-// not being entered as a string
 
-// Header Buttons
-
-//Building object for cart
 
 var items = [{
     meal:'Chicken Strips',
@@ -53,10 +48,6 @@ var mealThree = $("<h5>");
 mealThree.attr("class", "mealtwo");
 mealThree.text("3. "+ items[2].meal + " with " + items[2].selection[1]);
 menuItems.append(mealThree);
-
-
-
-
 
 // building html from object in items of cart //
 
@@ -107,8 +98,6 @@ localStorage.setItem("cost1", totalCost) // setting a value to use for currency 
 //     localStorage.setItem("currency",pretendCurrency);
 
 // })
-
-
 
 //var currencyAmount = localStorage.getItem("currency");
 
@@ -173,12 +162,6 @@ function findTheCurrency(){
         var rate4 = response.rates.JPY
         var rate5 = response.rates.GBP
         var rate6 = response.rates.CHF
-        // console.log(rate1);
-        // console.log(rate2);
-        // console.log(rate3);
-        // console.log(rate4);
-        // console.log(rate5);
-        // console.log(rate6);
 
 
         //Canadian
@@ -221,6 +204,8 @@ function findTheCurrency(){
 
         buttonArea = $(".buttonarea");
 
+        // for loop to build buttons
+
         for (var i=0; i<6; i++){
             buttonBTN = $("<button>");
             buttonBTN.attr(buttonAttributes[i]);
@@ -229,56 +214,11 @@ function findTheCurrency(){
 
         }
     
-
         //costButton = $(".costButtons"); // Div for Cost Buttons
 
-        //div for clickable
+        //div for clickable event
 
         buttonArea = $(".buttonarea");
-
-        
-
-
-        // paymentPref = $("<h3>");
-        // paymentPref.attr("class", "paymentPref");
-        // paymentPref.text("What is your preferred currency to pay with?");
-        // costButton.append(paymentPref);
-        
-        //creating button for canadian dollar
-        // var button1 = $("<button>");
-        // button1.attr({"type":"submit", "class":"cadButton currencybuttons"});
-        // button1.text("Canadian Dollars (CAD)"); // canadian dollars
-        // buttonArea.append(button1);
-
-        // //creating button for south african dollar
-        // var button2 = $("<button>");
-        // button2.attr({"type":"submit", "class":"zarButton currencybuttons"});
-        // button2.text("South African Rand (ZAR)"); // south african dollars
-        // buttonArea.append(button2);
-
-        // //creating button for euro
-        // var button3 = $("<button>");
-        // button3.attr({"type":"submit", "class":"eurButton currencybuttons"});
-        // button3.text("Euro (EUR)"); // euros
-        // buttonArea.append(button3);
-
-        // //creating button for yen
-        // var button4 = $("<button>");
-        // button4.attr({"type":"submit", "class":"yenButton currencybuttons"});
-        // button4.text("Japanese Yen (YEN)"); // japanese yen
-        // buttonArea.append(button4);
-
-        // //creating button for GBP
-        // var button5 = $("<button>");
-        // button5.attr({"type":"submit", "class":"gbpButton currencybuttons"});
-        // button5.text("British Pound (GBP)"); // british pound
-        // buttonArea.append(button5);
-
-        // //creating button for CHF
-        // var button6 = $("<button>");
-        // button6.attr({"type":"submit", "class":"chfButton currencybuttons"});
-        // button6.text("Swiss Franc (CHF)"); // swiss franc
-        // buttonArea.append(button6);
 
         // canadian button click event
 
@@ -347,7 +287,7 @@ const clear = function(){
 }
 
 
-
+// testing joke api
 const settings = {
 	"async": true,
 	"crossDomain": true,

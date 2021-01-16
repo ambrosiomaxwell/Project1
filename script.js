@@ -1,3 +1,39 @@
+let Cart ={
+    'items' : [],
+
+    'subtotal': 0,
+
+    'total': this.subtotal * 1.07,
+    
+     addItem(nameOf, price, picURL){
+
+
+        objItem = {
+            meal: nameOf,
+
+            selection: picURL,
+
+            cost: price
+            
+        }
+        this.items.push(objItem)
+    },
+
+    getSubtotal(){
+        this.items.forEach(e =>{
+
+            this.subtotal = this.subtotal + parseInt(e.cost)
+            console.log(this.subtotal)
+
+        })
+    },
+    clearCart(){
+        this.items = []
+
+    }
+
+}
+
 menu = [
     {
         itemName: 'Burger',
@@ -44,25 +80,25 @@ menu = [
 
 menu.forEach(function(e){
     //sets up row
-    itemHolder = $('<div>').addClass('row rounded bg-dark row-style')
+    itemHolder = $('<div>').addClass('row rounded bg-dark row-style accordion')
     //makes picture element and attaches image url
-    picture = $('<img>').attr('src', e.pictureSrc,).addClass('col-md-1')
+    picture = $('<img>').attr('src', e.pictureSrc,).addClass('col-md-1 rounded pic-class')
     itemHolder.append(picture)
     //Holds item name and description
-    infoHolder = $('<div>').addClass('col-md-8')
+    infoHolder = $('<div>').addClass('col-md-8 info')
     //grabs name from object
-    nameHolder = $('<h5>').text(e.itemName)
+    nameHolder = $('<h5>').text(e.itemName).addClass('item-name')
     console.log(e.itemName)
     //grabs item desctiption from object
     description = $('<p>').text(e.itemDescript)
 
-    priceHolder = $('<p>').addClass('col-md-1').text(e.itemPrice)
+    priceHolder = $('<p>').addClass('col-md-1 price-value').text(e.itemPrice)
 
     //adds everything for item info
     infoHolder.prepend(description)
     infoHolder.prepend(nameHolder)
 
-    addToCart = $('<button>').addClass('btn btn-success col-md-2').text('Add to Cart')
+    addToCart = $('<button>').addClass('btn btn-success col-md-2 add-cart-button').text('Add to Cart')
     //adds items to holders then sends he elements to the HTML
     itemHolder.append(infoHolder)  
     itemHolder.append(priceHolder)
@@ -72,36 +108,18 @@ menu.forEach(function(e){
 });
 
 
-
-
-
-class Cart{
-    items = [];
-
-    subtotal =0;
-
-    total = subtotal * 1.07;
+$('.add-cart-button').click(function(){
     
-    additem(nameOf, price, ingredients){
+    itemCost = $(this).siblings('.price-value').text()
+    picture = $(this).siblings('.pic-class').attr('src')
+    nameOfFood = $(this).siblings('.info').children('.item-name').text()
+    Cart.addItem(nameOfFood,itemCost, picture)
+    console.log(Cart.items)
+    console.log(nameOfFood)
 
 
-        objItem = {
-            meal: nameOf,
+})
 
-            selection: ingredients,
 
-            cost: price
-            
-        }
-        this.items.append(items)
-    }
 
-    getSubtotal(){
-        this.items.forEach(e =>{
 
-            subtotal = subtotal + e.cost
-
-        })
-    }
-
-}

@@ -4,6 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X UA-Compatable" content="ie=edge">
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+
         <!-- CSS only -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
@@ -11,10 +14,31 @@
         <link rel="stylesheet" type="text/css" href="stylereservation.css">
 
 
-        <link rel="stylesheet" type="text/css" href="./style.css">
+
     </header>
 
     <body>
+
+
+        <!-- // Nav Bar -->
+        <div class="logo">
+            <h1 class = "logo-txt"><span>That Jamacian Sigma</h1>
+        </div>
+            <i class="fas fa-bars menu-toggle" ></i>
+            <ul class="nav">
+                <li>
+                    <a href="#home" i class="fas fa-house-user"> Home</a> </li>
+                <li><a href="#menu" i class="fas fa-drumstick-bite"> Menu</a></li>
+                <li><a href="#order" i class="fas fa-desktop"> Virtual Ordering </a>
+                    <ul>
+                        <li><a href="#">Dine In Reservations</a></li>
+                        <li><a href="#">Carry-Out</a></li>
+                    </ul>
+                </li>
+                <li><a href="#locations"i class="fas fa-map"> Where To Find Us</a></li>
+                <li><a href="#signIn" i class="fas fa-user-circle"> Sign In</a></li>
+            </ul>
+
         <!---Navbar-->
         <div class = "topnav">
 
@@ -23,6 +47,8 @@
         <!---Page Title-->
 
         <h1 class="title">Bits 'n' Bytes Order Checkout</h1>
+
+        
 
         <!---Aside for Buttons-->
         <div class = "container-fluid">
@@ -36,16 +62,26 @@
             </div>
         </div>
 
-        <!----Cart for items-->
+      
 
         <div class = "container cartItems"></div>
+             <!----Cart for items-->
+
+        
+
+        <!---Area for final cost-->
         
         <div class="container-fluid costButtons"></div>
+            <!---Area for final cost-->
 
-        <div class="nextApp">
-            <!---nextapp will go here-->
+            <a class="active" href="#mainpage">Home</a>
+            <a href="#orderpage">Order Page</a>
+            <a href="#menupage">Menu Page</a>
+            <a href="#locations">Our Location</a>
+            <a href="#signin">Sign In</a>
         </div>
         
+        <div class="nextApp"> </div>
 
         <!-- Footer-->
 
