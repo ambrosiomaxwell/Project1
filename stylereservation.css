@@ -1,5 +1,29 @@
 body{
     display:block;
+
+    /*background-color: rgb(241, 245, 247);*/
+    background-color: rgb(231, 225, 225);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title{
+    border: solid;
+    border-color: green;
+    border-width: 1px;
+}
+
+h1{
+    text-align: center;
+    padding: 0px;
+}
+
+.infoareaone{
+    margin:auto;
+}
+
+.infoareatwo{
+    margin:auto;
+
     background-color: rgb(241, 245, 247);
     font-family: 'Times New Roman', Times, serif;
 }
@@ -7,16 +31,26 @@ body{
 h1{
     text-align: center;
     padding: 30px;
+
 }
 
 .email{
     border-style: solid;
 }
 
+
+
+textarea{
+    height: 60px;
+}
+
+
+
 textarea{
     margin: auto;
     height: 60px;
 }
+
 
 .enterbutton{
     text-align: center;
@@ -24,6 +58,40 @@ textarea{
     height: 60px;
     background-color: #008CBA;
     color: white;
+
+    padding: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.returnbutton{
+    text-align: center;
+    font-size: 18px;
+    height: 60px;
+    background-color: #008CBA;
+    color: white;
+    padding: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.currencybuttons{
+    background-color: rgb(72, 245, 72);
+    width: 100%;
+}
+
+.headingButtons{
+    text-align: center;
+}
+
+.menuitems{
+    background-color: white;
+    border-style:solid;
+    color: rgb(7, 87, 7);
+}
+
     padding: 0px 24px;
     text-align: center;
     text-decoration: none;
