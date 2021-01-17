@@ -1,8 +1,11 @@
 body{
     display:block;
     margin: 0px;
+    
+    background-size: contain;
     background-color: rgb(231, 225, 225);
     font-family: 'Lato', sans-serif;
+    
 }
 
 header {
@@ -183,7 +186,55 @@ textarea{
     font-size: 16px;
 }
 
+.banner {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+}
 
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
 
+}
 
+.banner h1{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
 
+}
+
+.card-content {
+    background: #fff;
+    height: 330px;
+}
+
+.card-content h3 {
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 25px 0 10px 0;
+}
+
+.form-row {
+    display: inline;
+    margin: 0;
+    width: 90%;
+}
+
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
