@@ -2,14 +2,15 @@ body{
     display:block;
 
     /*background-color: rgb(241, 245, 247);*/
-    background-color: rgb(231, 225, 225);
-    font-family: 'Times New Roman', Times, serif;
+    /*background-color: rgb(231, 225, 225);*/
+    background-color: rgb(118,118,118);
+    font-family: 'Lato', sans-serif;
 }
 
+/* Used on for title */
 .title{
-    border: solid;
-    border-color: green;
-    border-width: 1px;
+    background-color:black;
+    color: white;
 }
 
 h1{
@@ -17,9 +18,15 @@ h1{
     padding: 0px;
 }
 
+/* not used on reservations html anymore
+
 .infoareaone{
     margin:auto;
 }
+
+*/
+
+/* not used on reservations html anymore
 
 .infoareatwo{
     margin:auto;
@@ -28,30 +35,41 @@ h1{
     font-family: 'Times New Roman', Times, serif;
 }
 
+*/
+
+
+/* still being used */
 h1{
     text-align: center;
-    padding: 30px;
+    padding: 10px;
 
 }
 
+
+/* not being used in reservations html
 .email{
     border-style: solid;
 }
+*/
 
-
+/* not being used in reservations html
 
 textarea{
     height: 60px;
 }
 
+*/
 
 
+/* not being used in reservations html
 textarea{
     margin: auto;
     height: 60px;
 }
 
+*/
 
+/* not being used in reservations html
 .enterbutton{
     text-align: center;
     font-size: 18px;
@@ -64,7 +82,9 @@ textarea{
     text-decoration: none;
     display: block;
 }
+*/
 
+/* not being used in reservations html
 .returnbutton{
     text-align: center;
     font-size: 18px;
@@ -76,21 +96,34 @@ textarea{
     text-decoration: none;
     display: block;
 }
+*/
+
+/* Heading for Buttons */
+
+.headingButtons{
+    color:white;
+    padding: 10px;
+}
+
+/* Styling for currency buttons */
 
 .currencybuttons{
     background-color: rgb(72, 245, 72);
     width: 100%;
 }
 
+/* not being used in reservations html
 .headingButtons{
     text-align: center;
 }
+*/
 
+/* style for menu area */
 .menuitems{
     background-color: white;
     border-style:solid;
     color: rgb(7, 87, 7);
-}
+
 
     padding: 0px 24px;
     text-align: center;
@@ -99,6 +132,9 @@ textarea{
     font-size: 16px;
 }
 
+
+
+/* No longer using a return button 
 .returnbutton{
     font-size: 18px;
     background-color: #008CBA;
@@ -110,7 +146,42 @@ textarea{
     font-size: 16px;
 }
 
+no longer using a return button above */
 
 
 
+/* Cart Items is Order total Div - did not change naming in html */
+
+.cartItems{
+    text-align: center;
+    color: white;
+    margin-top:20px;
+    padding: 15px;
+
+}
+
+/* where joke is asked */
+
+.newButtonApp{
+    margin-top: 20px;
+    background-color: black;
+    color:white;
+    border:green;
+    border-style: solid;
+}
+
+
+/* joke div */
+
+.areaforjoke{
+    text-align:center;
+    margin-top: 20px;
+    padding:10px;
+}
+
+/* footer */
+
+.linkstoPages{
+    text-align: center;
+}
 
