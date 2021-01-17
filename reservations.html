@@ -4,6 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <meta http-equiv="X UA-Compatable" content="ie=edge">
+        <link rel="stylesheet" href="/stylereservation.css">
+
+
+         <!-- Font Awesome Font-->
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+         <!-- Google Fonts-->
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+ 
+    </head>
+
+    <header>
 
         <link rel="stylesheet" type="text/css" href="./style.css">
 
@@ -18,18 +31,81 @@
     <body>
 
         <!-- // Nav Bar -->
+
         <div class="logo">
-            <h1 class = "logo-txt"><span>That Jamacian Sigma</h1>
+            <h1 class = "logo-txt"><span>Bits 'n' Bytes</h1>
         </div>
         <!---removing header content
         <div class = "headercontent"></div>
             <i class="fas fa-bars menu-toggle" ></i>
+
+            <ul class="nav">
+                <li>
+                    <a href="index.html" i class="fas fa-house-user"> Home</a> </li>
+                <li><a href="menu.html" i class="fas fa-drumstick-bite"> Menu</a></li>
+                <li><a href="reservations.html" i class="fas fa-desktop"> Virtual Ordering </a>
+                    <ul>
+                        <li><a href="#">Dine In Reservations</a></li>
+                        <li><a href="#">Carry-Out</a></li>
+                    </ul>
+                </li>
+                <li><a href="#locations"i class="fas fa-map"> Where To Find Us</a></li>
+                <li><a href="#signIn" i class="fas fa-user-circle"> Sign In</a></li>
+            </ul>
+        
+    </header>
+    
+    <body>
+        <header></header>
+            
+        <h1 class="title">Reservations</h1>
+
+        <!---Div for Email Entry Row-->
+        <div class="infoareaone container">
+            <div class="row">
+                <div class="leftspacingemail col-md-1"></div>
+                <textarea id="emailtext" name="emailentry" rows="4" cols="60" class="email-text col-md-8" placeholder="Enter Email"></textarea>
+                <button type="submit" textarea="emailtext" class="enterbutton button-email col-md-3">Enter E-mail</button>
+            </div>
+        <br>
+
+        <!---Div for Phone Number Entry-->
+        <div class="infoareatwo container">
+            <div class="row">
+                <div class="leftspacingphone col-md-1"></div>
+                <textarea id="phonetext" name="phoneentry" rows="4" cols="60" class="phone-text col-md-8" placeholder="Enter Phone Number"></textarea>
+                <button type="submit" textarea="phonetext" class="enterbutton button-phone col-md-3">Enter Phone Number</button>
+            </div>
+        </div>
+        <br>
+
+        <!----Buttons to go back to other pages-->
+        <div class="buttonarea container">
+            <div class="row">
+                <button class="returnbutton button-homepage col-md-5">Homepage</button>
+                <div class="buttonspace col-md-2"></div>
+                <button class="returnbutton button-orderpage col-md-5">Menu Order Page</button>
+            </div>
+        </div>
+
+        <!----Footer -->
+        <!---Using Same setup as Main html Page-->
+
+        <div class = "footer">
+            <div class ="footer-content">
+                <div class="footer-section about"></div>
+                <div class="footer-section links"></div>
+                <div class="footer-section contactForm"></div>
+            </div>
+        </div>
+
             <ul class="nav"> 
                 <li><a href="index.html" i class="fas fa-house-user"> Home</a></li>
                 <li><a href="menu.html" i class="fas fa-drumstick-bite">Menu</a></li>
                 <li><a href="reservations.html" i class="fas fa-desktop">Virtual Ordering</a></li>
             </ul>
         --->
+
 
         <!---Navbar-->
         <div class = "topnav">

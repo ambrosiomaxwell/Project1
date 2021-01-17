@@ -1,16 +1,102 @@
 body{
     display:block;
 
+    margin: 0px;
+    background-color: rgb(231, 225, 225);
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    background: black;
+    height: 55px;
+    position: relative;
+}
+
+.showing {
+    max-height: 100em;
+}
+
+header {
+    background: black;
+    height: 55px;
+    position: relative;
+}
+
+header .logo{
+    float: left;
+    height: inherit;
+}
+
+header .logo-txt {
+    font-family: 'Lato', sans-serif;;
+    margin: 10px;
+}
+
+header ul {
+    float: right;
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    font-size: 1.0em;
+    
+}
+
+header ul li ul {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 180px;
+    display: none;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li a:hover {
+    background:rgb(48, 48, 48);
+    transition: 1s;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+    
+}
+
+header * {
+    color: teal
+}
+
+header .menu-toggle {
+    display: none;
+    right: 20px;
+    top: 15px;
+    position: absolute;
+=======
+
     /*background-color: rgb(241, 245, 247);*/
     /*background-color: rgb(231, 225, 225);*/
     background-color: rgb(118,118,118);
     font-family: 'Lato', sans-serif;
+
 }
 
 /* Used on for title */
 .title{
+
+    font-size: 42px;
+    
+
     background-color:black;
     color: white;
+
 }
 
 h1{
