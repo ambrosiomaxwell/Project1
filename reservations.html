@@ -6,6 +6,7 @@
         <meta http-equiv="X UA-Compatable" content="ie=edge">
         <link rel="stylesheet" href="/stylereservation.css">
 
+
          <!-- Font Awesome Font-->
          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
          <!-- Google Fonts-->
@@ -16,10 +17,28 @@
     </head>
 
     <header>
+
+        <link rel="stylesheet" type="text/css" href="./style.css">
+
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="stylereservation.css">
+
+    </head>
+
+    <body>
+
+        <!-- // Nav Bar -->
+
         <div class="logo">
             <h1 class = "logo-txt"><span>Bits 'n' Bytes</h1>
         </div>
+        <!---removing header content
+        <div class = "headercontent"></div>
             <i class="fas fa-bars menu-toggle" ></i>
+
             <ul class="nav">
                 <li>
                     <a href="index.html" i class="fas fa-house-user"> Home</a> </li>
@@ -80,6 +99,13 @@
             </div>
         </div>
 
+            <ul class="nav"> 
+                <li><a href="index.html" i class="fas fa-house-user"> Home</a></li>
+                <li><a href="menu.html" i class="fas fa-drumstick-bite">Menu</a></li>
+                <li><a href="reservations.html" i class="fas fa-desktop">Virtual Ordering</a></li>
+            </ul>
+        --->
+
 
         <!---Navbar-->
         <div class = "topnav">
@@ -89,8 +115,7 @@
         <!---Page Title-->
 
         <h1 class="title">Bits 'n' Bytes Order Checkout</h1>
-
-        
+                
 
         <!---Aside for Buttons-->
         <div class = "container-fluid">
@@ -105,35 +130,31 @@
         </div>
 
       
+        <div class = "container cartItems">
+            <!----Cart for items-->
 
-        <div class = "container cartItems"></div>
-             <!----Cart for items-->
-
-        
-
-        <!---Area for final cost-->
+        </div>
         
         <div class="container-fluid costButtons"></div>
             <!---Area for final cost-->
-
-            <a class="active" href="#mainpage">Home</a>
-            <a href="#orderpage">Order Page</a>
-            <a href="#menupage">Menu Page</a>
-            <a href="#locations">Our Location</a>
-            <a href="#signin">Sign In</a>
         </div>
         
-        <div class="nextApp"> </div>
+        <div class="nextApp">
+            <div class="row nextAppRow"></div>
+            <div class="areaforjoke col-md-12"></div>
+        </div>
 
         <!-- Footer-->
 
-        <div class="footer">
+        <div class="footer linkstoPages">
             <div class="footer-content">
                 <div class="footer-section about"></div>
                 <div class="footer-section social media"></div>
                 <div class="footer-section form"></div>
-                <a href="main.html">Main html</a>
-                <a href="menu.html">Menu html</a>
+                <a class="active" href="#mainpage">Home</a>
+                <a href="menu.html">Order Page</a>
+                <a href="menu.html">Menu Page</a>
+                <a href="index.html">Our Location</a>
             </div>
 
             <div class="footer-bottom">
