@@ -31,6 +31,7 @@ header .logo{
 header .logo-txt {
     font-family: 'Lato', sans-serif;;
     margin: 10px;
+    padding: inherit;
 }
 
 header ul {
@@ -178,7 +179,7 @@ form input[type = text], form input[type = number], form input::placeholder, sel
     display: inline-block;
     font-size: 16px;
 }
-
+/* Reservation Menu */
 .banner {
     min-height: 100vh;
     display:flex;
@@ -187,6 +188,8 @@ form input[type = text], form input[type = number], form input::placeholder, sel
     align-items: center;
     color: #fff;
     padding-bottom: 20px;
+    background: url("patio.jpg") center/cover no-repeat;
+    width: 100%;
 }
 
 .card-container{

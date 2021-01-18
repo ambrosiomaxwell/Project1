@@ -1,6 +1,4 @@
 
-
-
 var items = [{
     meal:'Chicken Strips',
     selection:['honey mustard','Ranch'],
@@ -57,19 +55,19 @@ var rowCart = $("<div>");
 rowCart.attr("class", "row");
 cartBuild.append(rowCart);
 
-headingCart = $("<h5>");
-headingCart.attr("class", "cartHeading col-md-6");
-headingCart.text("The following items have been added to your cart")
-rowCart.append(headingCart);
+// headingCart = $("<h5>");
+// headingCart.attr("class", "cartHeading col-md-6");
+// headingCart.text("The following items have been added to your cart")
+// rowCart.append(headingCart);
 
-cartItemH5 = $("<h5>");
-cartItemH5.attr("class", "cartItem1 col-md-6");
-cartItemH5.text("Meal Ordered: " + items[0].meal + " with "+items[0].selection[1]);
+// cartItemH5 = $("<h5>");
+// cartItemH5.attr("class", "cartItem1 col-md-6");
+// cartItemH5.text("Meal Ordered: " + items[0].meal + " with "+items[0].selection[1]);
 
 cartItemCost1 = $("<h5>");
-cartItemCost1.attr("class", "cartCost1");
+cartItemCost1.attr("class", "cartCost1 col-md-12");
 cartItemCost1.text("Order Total is: " + totalCost + " USD");
-rowCart.append(cartItemH5,cartItemCost1);
+rowCart.append(cartItemCost1);
 // setting local storage for cart Item 1
 localStorage.setItem("cost1", totalCost) // setting a value to use for currency cost
 
@@ -111,14 +109,19 @@ costButton = $(".costButtons"); // Div for Cost Buttons
 finalHeading = $(".headingFinal"); // Div for final cost
 
 
-// Information for next Application
+// Building Button for Click Event
 
 var newApp = $(".nextApp");
+var newAppRow = $(".nextAppRow");
+var areaForJoke = $(".areaforjoke");
 
 buttonNewApp = $("<button>");
-buttonNewApp.attr({"class":"newButtonApp"},{"type":"submit"});
-buttonNewApp.text("We want you to laugh today - Would you like to hear a joke?");
-newApp.append(buttonNewApp);
+buttonNewApp.attr({"class":"newButtonApp col-md-12"},{"type":"submit"});
+buttonNewApp.text("Click Here! We want you to laugh today - Would you like to hear a joke?");
+newAppRow.append(buttonNewApp);
+
+
+// API for Joke
 
 $(".newButtonApp").on("click", function(event){
     event.preventDefault();
@@ -137,7 +140,14 @@ $(".newButtonApp").on("click", function(event){
     $.ajax(settings).done(function (response) {
         console.log(response);
 
+        console.log(response.content);
+        var jokeToday = response.content;
 
+        var jokeResponseH5 = $("<h3>");
+        jokeResponseH5.attr("class","jokeresponse");
+        jokeResponseH5.text(jokeToday);
+        areaForJoke.append(jokeResponseH5)
+    
     });
 
 })
@@ -227,7 +237,6 @@ function findTheCurrency(){
             cadCost.text("Your final Order Cost is: " + cadRate +" CAD Canadian Dollars");
             cadCost.attr("class", "cadcost")
             clear();
-            costButton.empty();
             costButton.append(cadCost);
         
         });
@@ -249,6 +258,7 @@ function findTheCurrency(){
             var eurCost = $("<h1>");
             eurCost.text("Your final Order Cost is: " + eurRate +" Euros");
             eurCost.attr("class", "eurcost")
+            clear();
             costButton.append(eurCost);
         });
 
@@ -258,6 +268,7 @@ function findTheCurrency(){
             var yenCost = $("<h1>");
             yenCost.text("Your final Order Cost is: " + yenRate +" YEN");
             yenCost.attr("class", "yencost")
+            clear();
             costButton.append(yenCost);
         });
 
@@ -267,6 +278,7 @@ function findTheCurrency(){
             var gbpCost = $("<h1>");
             gbpCost.text("Your final Order Cost is: " + gbpRate +" GBP");
             gbpCost.attr("class", "gbpcost")
+            clear();
             costButton.append(gbpCost);
         });
 
@@ -276,31 +288,40 @@ function findTheCurrency(){
             var chfCost = $("<h1>");
             chfCost.text("Your final Order Cost is: " + chfRate +" CHF");
             chfCost.attr("class", "gbpcost");
+            clear();
             costButton.append(chfCost);
         });
 
     });
 }
 
+
+// clearing button div after click
+
 const clear = function(){
     costButton.empty();
 }
 
 
-// testing joke api
-const settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://joke3.p.rapidapi.com/v1/joke",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "e6c11a1393msh3c8cfb271ca5e65p1b33bbjsn5dcaa2747580",
-		"x-rapidapi-host": "joke3.p.rapidapi.com"
-	}
-};
 
-$.ajax(settings).done(function (response) {
-    console.log(response.content);
+// // testing joke api
+// const settings = {
+// 	"async": true,
+// 	"crossDomain": true,
+// 	"url": "https://joke3.p.rapidapi.com/v1/joke",
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-key": "e6c11a1393msh3c8cfb271ca5e65p1b33bbjsn5dcaa2747580",
+// 		"x-rapidapi-host": "joke3.p.rapidapi.com"
+// 	}
+// };
+
+// $.ajax(settings).done(function (response) {
+//     console.log(response.content);
+
+//     //adding in html
+
+
    
-});
+// });
 
