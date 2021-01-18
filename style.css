@@ -1,13 +1,22 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: url(https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?cs=srgb&dl=pexels-jonathan-borba-2983101.jpg&fm=jpg);
-    background-size: cover;
+    background-color: rgb(247, 247, 247);
     font-family: 'Lato', sans-serif;
 }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+    margin: 5px;
+    
+}
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 header {
-    background: black;
+    background: rgb(23, 23, 23);
     height: 55px;
     position: relative;
 }
@@ -47,6 +56,7 @@ header ul li ul {
     right: 0px;
     width: 180px;
     display: none;
+    z-index: 88888;
 }
 
 header ul li:hover ul {
@@ -75,6 +85,71 @@ header .menu-toggle {
     position: absolute;
 }
 
+.page-wrapper a:hover {
+    color: teal;
+}
+
+/*post slider */
+
+.food-slider{
+    position: relative;
+
+}
+
+.food-slider .slider-title {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.food-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: teal;
+    cursor: pointer;
+}
+
+.food-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: teal;
+    cursor: pointer;
+
+}
+
+
+.food-slider .food-wrapper {
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+
+.food-slider .food-wrapper .food {
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem rgb(120, 120, 120);
+} 
+
+
+
+.food-slider .food-wrapper .food .slider-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+
 
 @media only screen and (max-width: 870px) {
     header ul {
@@ -85,7 +160,7 @@ header .menu-toggle {
     }
 
     body {
-        background: teal;
+        background: rgb(237, 237, 237);
     }
 
     header ul li {
