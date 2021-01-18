@@ -1,9 +1,10 @@
-body{
-    display:block;
-
+body {
+    padding: 0px;
     margin: 0px;
+    background-size: contain;
     background-color: rgb(231, 225, 225);
     font-family: 'Lato', sans-serif;
+    
 }
 
 header {
@@ -30,6 +31,7 @@ header .logo{
 header .logo-txt {
     font-family: 'Lato', sans-serif;;
     margin: 10px;
+    padding: inherit;
 }
 
 header ul {
@@ -79,40 +81,17 @@ header .menu-toggle {
     right: 20px;
     top: 15px;
     position: absolute;
-=======
-
-    /*background-color: rgb(241, 245, 247);*/
-    /*background-color: rgb(231, 225, 225);*/
-    background-color: rgb(118,118,118);
-    font-family: 'Lato', sans-serif;
-
 }
 
-/* Used on for title */
-.title{
-
-    font-size: 42px;
-    
-
-    background-color:black;
-    color: white;
-
-}
 
 h1{
     text-align: center;
     padding: 0px;
 }
 
-/* not used on reservations html anymore
-
 .infoareaone{
     margin:auto;
 }
-
-*/
-
-/* not used on reservations html anymore
 
 .infoareatwo{
     margin:auto;
@@ -121,41 +100,30 @@ h1{
     font-family: 'Times New Roman', Times, serif;
 }
 
-*/
-
-
-/* still being used */
 h1{
     text-align: center;
-    padding: 10px;
+    padding: 30px;
 
 }
 
-
-/* not being used in reservations html
 .email{
     border-style: solid;
 }
-*/
 
-/* not being used in reservations html
+
 
 textarea{
     height: 60px;
 }
 
-*/
 
 
-/* not being used in reservations html
 textarea{
     margin: auto;
     height: 60px;
 }
 
-*/
 
-/* not being used in reservations html
 .enterbutton{
     text-align: center;
     font-size: 18px;
@@ -168,9 +136,7 @@ textarea{
     text-decoration: none;
     display: block;
 }
-*/
 
-/* not being used in reservations html
 .returnbutton{
     text-align: center;
     font-size: 18px;
@@ -182,45 +148,27 @@ textarea{
     text-decoration: none;
     display: block;
 }
-*/
-
-/* Heading for Buttons */
-
-.headingButtons{
-    color:white;
-    padding: 10px;
-}
-
-/* Styling for currency buttons */
 
 .currencybuttons{
     background-color: rgb(72, 245, 72);
     width: 100%;
 }
 
-/* not being used in reservations html
 .headingButtons{
     text-align: center;
 }
-*/
 
-/* style for menu area */
 .menuitems{
     background-color: white;
     border-style:solid;
     color: rgb(7, 87, 7);
+}
 
-
-    padding: 0px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+form input[type = text], form input[type = number], form input::placeholder, select {
+    color: #9a9a9a;
 }
 
 
-
-/* No longer using a return button 
 .returnbutton{
     font-size: 18px;
     background-color: #008CBA;
@@ -231,43 +179,72 @@ textarea{
     display: inline-block;
     font-size: 16px;
 }
+/* Reservation Menu */
+.banner {
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-bottom: 20px;
+    background: url("patio.jpg") center/cover no-repeat;
+    width: 100%;
+}
 
-no longer using a return button above */
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
 
+}
 
+.banner h1{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
 
-/* Cart Items is Order total Div - did not change naming in html */
+}
 
-.cartItems{
+.card-content {
+    background: #fff;
+    height: 330px;
+}
+
+.card-content h3 {
     text-align: center;
-    color: white;
-    margin-top:20px;
-    padding: 15px;
+    color: #000;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 25px 0 10px 0;
+}
+
+.form-row {
+    display: inline;
+    margin: 0;
+    width: 90%;
+}
+
+form select, form input{
+    display: block;
+    width: 85%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 500;
 
 }
 
-/* where joke is asked */
 
-.newButtonApp{
-    margin-top: 20px;
-    background-color: black;
-    color:white;
-    border:green;
-    border-style: solid;
+/* Responsiveness */
+@media (max-width: 990px){
+    .card-container{
+        grid-template-columns: 100%;
+        width: 100vw;
+    }
+.card-img{
+    height: 330px;
+    }
 }
-
-
-/* joke div */
-
-.areaforjoke{
-    text-align:center;
-    margin-top: 20px;
-    padding:10px;
-}
-
-/* footer */
-
-.linkstoPages{
-    text-align: center;
-}
-

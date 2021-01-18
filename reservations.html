@@ -16,26 +16,15 @@
  
     </head>
 
-    <header>
-
-        <link rel="stylesheet" type="text/css" href="./style.css">
-
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" type="text/css" href="stylereservation.css">
-
-    </head>
-
     <body>
+        <header>
 
         <!-- // Nav Bar -->
 
         <div class="logo">
             <h1 class = "logo-txt"><span>Bits 'n' Bytes</h1>
         </div>
-        <!---removing header content
+        
         <div class = "headercontent"></div>
             <i class="fas fa-bars menu-toggle" ></i>
 
@@ -53,40 +42,72 @@
                 <li><a href="#signIn" i class="fas fa-user-circle"> Sign In</a></li>
             </ul>
         
-    </header>
+         </header>
     
     <body>
-        <header></header>
-            
-        <h1 class="title">Reservations</h1>
+        <section class="banner">
+            <h1 class="title">Reserve Your Seat With Us</h1>
+            <div class = "card-container">
+                <div class = "res-img">
 
-        <!---Div for Email Entry Row-->
-        <div class="infoareaone container">
-            <div class="row">
-                <div class="leftspacingemail col-md-1"></div>
-                <textarea id="emailtext" name="emailentry" rows="4" cols="60" class="email-text col-md-8" placeholder="Enter Email"></textarea>
-                <button type="submit" textarea="emailtext" class="enterbutton button-email col-md-3">Enter E-mail</button>
-            </div>
-        <br>
+                </div>
+                
+                <div class= "card-content">
+                    <h3> Reservations </h3>
+                    <form>
+                        
+                        <div class="form-row">
+                            <select name = "days">
+                                <option value="select-day">Select Your Day</option>
+                                <option value="select-day">Sunday</option>
+                                <option value="select-day">Monday</option>
+                                <option value="select-day">Tuesday</option>
+                                <option value="select-day">Wednesday</option>
+                                <option value="select-day">Thursday</option>
+                                <option value="select-day">Friday</option>
+                                <option value="select-day">Saturday</option>
 
-        <!---Div for Phone Number Entry-->
-        <div class="infoareatwo container">
-            <div class="row">
-                <div class="leftspacingphone col-md-1"></div>
-                <textarea id="phonetext" name="phoneentry" rows="4" cols="60" class="phone-text col-md-8" placeholder="Enter Phone Number"></textarea>
-                <button type="submit" textarea="phonetext" class="enterbutton button-phone col-md-3">Enter Phone Number</button>
+                            </select>
+
+                            <select name = "hours">
+                                <option value = "select-hour">Pick A Time</options>
+                                <option value = "10">10:00 AM</option>
+                                <option value = "10">11:00 AM</option>
+                                <option value = "10">12:00 PM</option>
+                                <option value = "10">1:00 PM</option>
+                                <option value = "10">2:00 PM</option>
+                                <option value = "10">3:00 PM</option>
+                                <option value = "10">4:00 PM</option>
+                                <option value = "10">5:00 PM</option>
+                                <option value = "10">6:00 PM</option>
+                                <option value = "10">7:00 PM</option>
+                                <option value = "10">8:00 PM</option>
+                                <option value = "10">9:00 PM</option>
+                                <option value = "10">10:00 PM</option>
+                                <option value = "10">11:00 PM</option>
+                            </select>
+
+                            <div class="form-row">
+                                <input type= "text" placeholder="Enter Full Name">
+                                <input type= "text" placeholder="Phone Number">
+                            </div>
+
+                            <div class = "form-row">
+                                <input type = "submit" value = "BOOK TABLE">
+                            </div>
+
+
+                        </div>
+                    </form>
+                </div>
+
             </div>
+
+       
         </div>
-        <br>
 
-        <!----Buttons to go back to other pages-->
-        <div class="buttonarea container">
-            <div class="row">
-                <button class="returnbutton button-homepage col-md-5">Homepage</button>
-                <div class="buttonspace col-md-2"></div>
-                <button class="returnbutton button-orderpage col-md-5">Menu Order Page</button>
-            </div>
-        </div>
+        </section>          
+        
 
         <!----Footer -->
         <!---Using Same setup as Main html Page-->
@@ -104,7 +125,7 @@
                 <li><a href="menu.html" i class="fas fa-drumstick-bite">Menu</a></li>
                 <li><a href="reservations.html" i class="fas fa-desktop">Virtual Ordering</a></li>
             </ul>
-        --->
+        
 
 
         <!---Navbar-->
