@@ -2,7 +2,7 @@ html, body {
     padding: 0px;
     margin: 0px;
     height: 100%;
-    background: url("./Assests/hotdog1.jpg");
+    background: url("./Assests/hotdog1.jpg") center/cover no-repeat;
     font-family: 'Lato', sans-serif;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -17,7 +17,7 @@ a {
     color: inherit;
 }
 header {
-    background: rgb(23, 23, 23);
+    background: #343a40;
     height: 55px;
     position: relative;
 }
@@ -65,7 +65,7 @@ header ul li:hover ul {
 }
 
 header ul li a:hover {
-    background:rgb(48, 48, 48);
+    background:rgb(119, 119, 119);
     transition: 1s;
 }
 
@@ -76,7 +76,7 @@ header ul li {
 }
 
 header * {
-    color: teal
+    color: white;
 }
 
 header .menu-toggle {
@@ -160,12 +160,81 @@ header .menu-toggle {
     color: white;
     height:400px;
     position: relative;
+    
+}
+
+.footer .footer-content {
+    height: 350px;
     display: flex;
 }
 
-.footer.footer-content .footer-section {
+.footer .footer-content .footer-section {
     flex: 1;
+    padding: 25px;
+    border: 1px solid white
 }
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid grey;
+    width:45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+}
+
+.footer .footer-content .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .6s;
+}
+
+.footer .footer-content .link ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+
+}
+
+.footer .footer-content .link ul a:hover {
+    margin-left: 15px;
+    color: white;
+    transition: all .6s;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background:rgb(52, 52, 52);
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background:rgb(52, 52, 52);
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+}
+
+
 .footer .footer-bottom {
     background: #343a40;
     color: rgb(118, 118, 118);
