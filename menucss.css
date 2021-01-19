@@ -1,0 +1,297 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    background: url("./Assests/spices.jpg") center/cover no-repeat;
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    color: gray;
+    margin: 5px;
+    
+}
+.container{
+    margin-top: 20px;
+    
+}
+.row-style{
+    background-color: #343a40;
+    color:white;
+    padding:20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+header {
+    background: #343a40;
+    height: 55px;
+    position: relative;
+}
+
+.showing {
+    max-height: 100em;
+}
+header .logo{
+    float: left;
+    height: inherit;
+}
+
+header .logo-txt {
+    font-family: 'Lato', sans-serif;;
+    margin: 10px;
+}
+
+
+header ul {
+    float: right;
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+    font-size: 1.0em;
+    
+}
+
+header ul li ul {
+    position: absolute;
+    top: 55px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li a:hover {
+    background:rgb(119, 119, 119);
+    transition: 1s;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+    
+}
+
+header * {
+    color: white;
+}
+
+header .menu-toggle {
+    display: none;
+    right: 20px;
+    top: 15px;
+    position: absolute;
+}
+.page-wrapper {
+    min-height: 100%;
+}
+
+.page-wrapper a:hover {
+    color: teal;
+}
+
+/*post slider */
+
+.food-slider{
+    position: relative;
+
+}
+
+.food-slider .slider-title {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.food-slider .next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color: teal;
+    cursor: pointer;
+}
+
+.food-slider .prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color: teal;
+    cursor: pointer;
+
+}
+
+
+.food-slider .food-wrapper {
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+
+
+.food-slider .food-wrapper .food {
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem rgb(120, 120, 120);
+} 
+
+
+
+.food-slider .food-wrapper .food .slider-image {
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    
+}
+/* FOOTER */
+
+.footer {
+    background:rgb(118, 118, 118);
+    color: white;
+    height:400px;
+    position: relative;
+    
+}
+
+.footer .footer-content {
+    height: 350px;
+    display: flex;
+}
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white
+}
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid grey;
+    width:45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+}
+
+.footer .footer-content .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .6s;
+}
+
+.footer .footer-content .link ul a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+
+}
+
+.footer .footer-content .link ul a:hover {
+    margin-left: 15px;
+    color: white;
+    transition: all .6s;
+}
+
+.footer .footer-content h1,
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background:rgb(52, 52, 52);
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+}
+
+.footer .footer-content .contact-form .contact-input {
+    background:rgb(52, 52, 52);
+    color: #bebdbd;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .9rem 1.4rem;
+    border: none;
+}
+
+
+.footer .footer-bottom {
+    background: #343a40;
+    color: rgb(118, 118, 118);
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 870px) {
+    header ul {
+        width: 100%;
+        background: rgb(191, 208, 208);
+        max-height: 0px;
+        overflow: hidden;
+    }
+
+    body {
+        background: rgb(237, 237, 237);
+    }
+
+    header ul li {
+        width: 100%;
+    }
+
+    header ul li ul {
+        position: static;
+        display: block;
+        width: 100%;
+    }
+
+    header ul li ul li a {
+        padding: 10px;
+        color:rgb(118, 118, 118);
+        background: white;
+        padding-left: 30px;
+    }
+
+    header .menu-toggle {
+        display: block;
+
+    }
+
+}

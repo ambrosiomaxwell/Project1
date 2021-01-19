@@ -1,5 +1,5 @@
-export const Cart ={
-    'items' : [],
+var Cart ={
+    
 
     'subtotal': 0,
 
@@ -35,10 +35,13 @@ export const Cart ={
     checkCart(){
         retrieve = localStorage.getItem("cart")
     if(retrieve != null){
-    Cart.items = JSON.parse(retrieve)
+    this.items = JSON.parse(retrieve)
+    }else{
+        this.items=[]   
 }
     }
 }
+Cart.checkCart()
 
 
 menu = [
@@ -82,12 +85,37 @@ menu = [
         ingredientsEdit: ['ranch','honey mustard'],
         category:''
     },
+    {
+        itemName: 'Tacos',
+        itemDescript: 'An order of 3 tacos with lettuce, totmato, cheese, and sour cream',
+        itemPrice: 7,
+        pictureSrc: 'https://www.livinglou.com/wp-content/uploads/2013/03/slow-cooker-chicken-tacos-150x150.jpg',
+        ingredientsEdit: ['Cheese', 'lettuce', 'tomato', ' Sour Cream'],
+        category: ''
+    },
+    {
+        itemName: 'Loaded Omlet',
+        itemDescript: 'An Omlet made with 7 eggs, peppers, ham, and loaded with cheese',
+        itemPrice: 11 ,
+        pictureSrc: 'https://www.recipehub.in/wp-content/uploads/2020/02/omeltte-recipe-150x150.jpg',
+        ingredientsEdit: [],
+        category:''
+    },
+    {
+        itemName: 'Chicken and Waffles',
+        itemDescript: 'Chicken served with waffles with syrup and honey mustard',
+        itemPrice:8,
+        pictureSrc: 'https://www.wellseasonedstudio.com/wp-content/uploads/2019/03/Chicken-and-waffles-18-150x150.jpg',
+        ingredientsEdit: [],
+        category:''
+    },
+    
 ]
 
 
 menu.forEach(function(e){
     //sets up row
-    itemHolder = $('<div>').addClass('row rounded bg-dark row-style accordion')
+    itemHolder = $('<div>').addClass('row row-style')
     //makes picture element and attaches image url
     picture = $('<img>').attr('src', e.pictureSrc,).addClass('col-md-1 rounded pic-class')
     itemHolder.append(picture)
