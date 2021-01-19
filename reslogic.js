@@ -6,37 +6,90 @@
 // Header Buttons
 
 //Building object for cart
+var Cart ={
+    'items' : [],
 
-var items = [{
-    meal:'Chicken Strips',
-    selection:['honey mustard','Ranch'],
-    cost: 9
+    'subtotal': 0,
+
+    'total':0,
+    
+     addItem(nameOf, price, picURL){
+
+
+        objItem = {
+            meal: nameOf,
+
+            selection: picURL,
+
+            cost: price
+            
+        }
+        this.items.push(objItem)
+        localStorage.setItem('cart', JSON.stringify(this.items))
     },
-    {
-    meal:'Burger',
-    selection:['pickles','ketchup'],
-    cost: 10
 
-}]
+    getSubtotal(){
+        this.items.forEach(e =>{
 
-console.log(items[0].meal);
-console.log(items[1].cost);
+            this.subtotal = this.subtotal + parseInt(e.cost)
+            console.log(this.subtotal)
+        })
+    },
+    getTotal(){
+        this.total= this.subtotal * 1.07
+    }
+    ,
+    clearCart(){
+        this.items = []
+
+    },
+    checkCart(){
+        retrieve = localStorage.getItem("cart")
+    if(retrieve != null){
+    Cart.items = JSON.parse(retrieve)
+}
+    }
+}
+
+
+Cart.checkCart();
 
 //Building menu for orders for checkout
-
 menuItems = $(".menuitems");
+Cart.items.forEach(e => {
+    var mealOne = $("<h4>");
+    mealOne.attr("class", "mealone")
+    mealOne.text(e.meal)
+    //mealOneSide.attr("class", "mealoneside")
+    //mealOneSide.text("")
+    menuItems.append(mealOne);
 
-var mealOne = $("<h4>");
-mealOne.attr("class", "mealone")
-mealOne.text(items[0].meal)
+    
+});
+
+
+
+
+//var mealOne = $("<h4>");
+//mealOne.attr("class", "mealone")
+//mealOne.text(Cart.items[0].meal)
 //mealOneSide.attr("class", "mealoneside")
 //mealOneSide.text("")
-menuItems.append(mealOne);
+//menuItems.append(mealOne);
 
-var mealTwo = $("<h4>");
-mealTwo.attr("class", "mealtwo");
-mealTwo.text(items[1].meal);
-menuItems.append(mealTwo);
+//var mealTwo = $("<h4>");
+//mealTwo.attr("class", "mealtwo");
+//mealTwo.text(Cart.items[1].meal);
+//menuItems.append(mealTwo);
+orderText = 'Meal Ordered:'
+function textFunction(){
+    Cart.items.forEach(e=>{
+        orderText += e.meal;
+        console.log(orderText)
+    })
+    return orderText
+}
+
 
 
 
@@ -52,13 +105,15 @@ cartBuild.append(headingCart);
 
 cartItemH5 = $("<h5>");
 cartItemH5.attr("class", "cartItem1");
-cartItemH5.text("Meal Ordered: " + items[0].meal + " with "+items[0].selection[1]);
+
+
+cartItemH5.text("Meal Ordered: " + Cart.items[0].meal + " with "+items[0].selection[1]);
 cartItemCost1 = $("<h5>");
 cartItemCost1.attr("class", "cartCost1");
-cartItemCost1.text("Order Total is: " + items[0].cost + " USD");
+cartItemCost1.text("Order Total is: " + Cart.items[0].cost + " USD");
 headingCart.append(cartItemH5,cartItemCost1);
 // setting local storage for cart Item 1
-localStorage.setItem("cost1", items[0].cost) // setting a value to use for currency cost
+localStorage.setItem("cost1", Cart.items[0].cost) // setting a value to use for currency cost
 
 
 var headButton = $(".topnav");

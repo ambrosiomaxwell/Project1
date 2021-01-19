@@ -1,4 +1,4 @@
-let Cart ={
+export const Cart ={
     'items' : [],
 
     'subtotal': 0,
@@ -17,6 +17,7 @@ let Cart ={
             
         }
         this.items.push(objItem)
+        localStorage.setItem('cart', JSON.stringify(this.items))
     },
 
     getSubtotal(){
@@ -30,9 +31,15 @@ let Cart ={
     clearCart(){
         this.items = []
 
-    }
-
+    },
+    checkCart(){
+        retrieve = localStorage.getItem("cart")
+    if(retrieve != null){
+    Cart.items = JSON.parse(retrieve)
 }
+    }
+}
+
 
 menu = [
     {
