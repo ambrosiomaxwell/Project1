@@ -16,11 +16,11 @@ The main home page:
 ![](imgs/projectonehomepage.png)
 
 The reservations page:
-![](imgs/projectonereservations.png)
+![](imgs/projectonereservation.png)
 
 The currency API:
-![](imgs/projectonecurrencybutton.png)
+![](imgs/projectonecurrencybuttons.png)
 
 The joke API:
-![](imgs/projectonejoke)
+![](imgs/projectonejoke.png)
 

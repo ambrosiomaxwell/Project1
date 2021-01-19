@@ -1,55 +1,121 @@
 
-var items = [{
-    meal:'Chicken Strips',
-    selection:['honey mustard','Ranch'],
-    cost: 10
+// testing logic through e-mail link.
+
+// not being entered as a string
+
+// Header Buttons
+
+//Building object for cart
+var Cart ={
+    'items' : [],
+
+    'subtotal': 0,
+
+    'total':0,
+    
+     addItem(nameOf, price, picURL){
+
+
+        objItem = {
+            meal: nameOf,
+
+            selection: picURL,
+
+            cost: price
+            
+        }
+        this.items.push(objItem)
+        localStorage.setItem('cart', JSON.stringify(this.items))
     },
-    {
-    meal:'Burger',
-    selection:['pickles','ketchup'],
-    cost: 10
+
+
+
+    getSubtotal(){
+        this.items.forEach(e =>{
+
+
+            this.subtotal = this.subtotal + parseInt(e.cost)
+            console.log(this.subtotal)
+        })
+        return Cart.subtotal
     },
-    {
-    meal: 'Chicken Sandwich',
-    selection: ['sharp cheddar', 'pepperjack'],
-    cost: 10
+    getTotal(){
+        this.total= this.subtotal * 1.07
+        return Cart.total
+    }
+    ,
+    clearCart(){
+        this.items = []
+        localStorage.setItem('cart', JSON.stringify(this.items))
+
+
     },
-    {
-    meal: 'Salad',
-    selection: ['ranch','vinegar'],
-    cost: 10
+    checkCart(){
+        retrieve = localStorage.getItem("cart")
+    if(retrieve != null){
+    Cart.items = JSON.parse(retrieve)
+}
+    }
+}
 
-}]
 
-item1Cost = items[0].cost
-item2Cost = items[1].cost
-item3Cost = items[2].cost
-item4Cost = items[3].cost
+Cart.checkCart();
 
-totalCost = item1Cost + item2Cost + item3Cost + item4Cost;
+//Building menu for orders for checko
 
-//Building menu for orders for checkout
+
 
 menuItems = $(".menuitems");
+Cart.items.forEach(e =>{
+    
+    var mealOne = $("<h3>");
+    mealOne.attr("class", "mealone")
+    mealOne.text( e.meal);
+    menuItems.append(mealOne);
+    
+})
 
-var mealOne = $("<h3>");
-mealOne.attr("class", "mealone")
-mealOne.text("1. " +items[0].meal + " with " + items[0].selection[0]);
-menuItems.append(mealOne);
+orderText = 'Meals Ordered:'
+textFunction()
+function textFunction(){
+    Cart.items.forEach(e=>{
+        orderText = orderText  + e.meal + ", ";
+        console.log(orderText)
+    })
+    return orderText
+}
 
-var mealTwo = $("<h3>");
-mealTwo.attr("class", "mealtwo");
-mealTwo.text("2. "+ items[1].meal + " with " + items[1].selection[0]);
-menuItems.append(mealTwo);
+//var mealOne = $("<h3>");
+//mealOne.attr("class", "mealone")
+//mealOne.text("1. " +items[0].meal + " with " + items[0].selection[0]);
+//menuItems.append(mealOne);
 
-var mealThree = $("<h3>");
-mealThree.attr("class", "mealtwo");
-mealThree.text("3. "+ items[2].meal + " with " + items[2].selection[1]);
-menuItems.append(mealThree);
+
 
 // building html from object in items of cart //
 
-var cartBuild = $(".cartItems"); // Div for cart items start
+var cartBuild = $(".cartItems"); 
+headingCart = $("<h3>");
+headingCart.attr("class", "cartHeading");
+headingCart.text("The following items have been added to your cart")
+cartBuild.append(headingCart);// Div for cart items start
+
+Cart.items.forEach(e =>{
+
+})
+
+
+cartItemH5 = $("<h5>");
+cartItemH5.attr("class", "cartItem1");
+
+
+cartItemH5.text(orderText);
+cartItemCost1 = $("<h5>");
+cartItemCost1.attr("class", "cartCost1");
+cartItemCost1.text("Order subtotal is : " + Cart.getSubtotal() + " USD");
+headingCart.append(cartItemH5,cartItemCost1);
+// setting local storage for cart Item 1
+localStorage.setItem("cost1", Cart.subtotal) // setting a value to use for currency cost
 
 var rowCart = $("<div>");
 rowCart.attr("class", "row");
@@ -59,10 +125,10 @@ cartBuild.append(rowCart);
 
 cartItemCost1 = $("<h2>");
 cartItemCost1.attr("class", "cartCost1 col-md-12");
-cartItemCost1.text("Order Total is: " + totalCost + " USD");
+cartItemCost1.text("Order Total is: " + Cart.getTotal() + " USD");
 rowCart.append(cartItemCost1);
 // setting local storage for cart Item 1
-localStorage.setItem("cost1", totalCost) // setting a value to use for currency cost
+localStorage.setItem("cost1", Cart.getTotal()) // setting a value to use for currency cost
 
 
 //var currencyAmount = localStorage.getItem("currency");
@@ -217,7 +283,7 @@ function findTheCurrency(){
         })
 
         function displayCurrencyMessage(currencyRate){
-            var h1Element = $("<h1>");
+            var h1Element = $("<h1>").addClass('text-stuff');
             h1Element.text("Your final Order Cost is: "+ currencyRate);
             clear();
             costButton.append(h1Element);

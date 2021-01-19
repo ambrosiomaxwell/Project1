@@ -16,6 +16,9 @@ header {
 .showing {
     max-height: 100em;
 }
+.text-stuff{
+    color: white;
+}
 
 header {
     background: #343a40;
