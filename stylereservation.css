@@ -149,13 +149,43 @@ textarea{
     display: block;
 }
 
+/* currency buttons on reservations html */
+
 .currencybuttons{
     background-color: #343a40;
+    font-size: 18px;
     color: white;
-    width: 50%;
-    margin: 4px;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
     justify-content: center;
 
+}
+
+/* class for where currency calculation */
+
+.costButtons{
+    color: white;
+
+}
+
+/* centering cart cost in reservations html */
+
+.cartCost1{
+    text-align: center;
+}
+
+/* class for button click of joke */
+
+.newButtonApp{
+    width: 100%;
+    padding: 40px;
+    font-size: 16px;
+}
+
+.jokeresponse{
+    text-align: center;
+    background-color: white;
 }
 
 .headingButtons{
@@ -172,10 +202,13 @@ textarea{
     margin: auto;
 }
 
+/* class for menutimes displayed on reservations html */
+
 .menuitems{
     background-color: white;
     border-style:solid;
     color: rgb(7, 87, 7);
+    text-align:center;
 }
 
 form input[type = text], form input[type = number], form input::placeholder, select {
