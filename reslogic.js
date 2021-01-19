@@ -64,6 +64,17 @@ Cart.checkCart();
 //Building menu for orders for checko
 
 
+
+menuItems = $(".menuitems");
+Cart.items.forEach(e =>{
+    
+    var mealOne = $("<h3>");
+    mealOne.attr("class", "mealone")
+    mealOne.text( e.meal);
+    menuItems.append(mealOne);
+    
+})
+
 orderText = 'Meals Ordered:'
 textFunction()
 function textFunction(){
