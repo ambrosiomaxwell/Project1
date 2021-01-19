@@ -109,6 +109,22 @@ menu = [
         ingredientsEdit: [],
         category:''
     },
+    {
+        itemName: 'All American Hot Dog',
+        itemDescript: 'A Hot dog with the works! chilli, onions, cheese, ketchup and mustard',
+        itemPrice: 4 ,
+        pictureSrc: 'https://quichemygrits.com/wp-content/uploads/2020/09/Creamy-Southern-Coleslaw-3-150x150.jpeg',
+        ingredientsEdit: [],
+        category:''
+    },
+    {
+        itemName: 'Wraps',
+        itemDescript: '2 Chicken wraps with buffalo, chicken, bacon, lettuce, and cheese',
+        itemPrice:7,
+        pictureSrc: 'https://www.yourhomebasedmom.com/wp-content/uploads/2012/03/asian-chicken-wrap-copy-150x150.jpg',
+        ingredientsEdit: [],
+        category:''
+    },
     
 ]
 
