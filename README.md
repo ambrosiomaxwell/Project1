@@ -1,4 +1,4 @@
-# Project1
+# Bitsnbytes
 Deployed Site Link: https://ambrosiomaxwell.github.io/Project1/
 
 Project Title: RestaurantQ
@@ -14,6 +14,9 @@ As a user I:
 
 The main home page:
 ![](imgs/projectonehomepage.png)
+
+The menu page:
+![](imgs/projectonemenupage.png)
 
 The reservations page:
 ![](imgs/projectonereservation.png)

@@ -1,9 +1,4 @@
 
-// testing logic through e-mail link.
-
-// not being entered as a string
-
-// Header Buttons
 
 //Building object for cart
 var Cart ={
@@ -84,12 +79,6 @@ function textFunction(){
     })
     return orderText
 }
-
-//var mealOne = $("<h3>");
-//mealOne.attr("class", "mealone")
-//mealOne.text("1. " +items[0].meal + " with " + items[0].selection[0]);
-//menuItems.append(mealOne);
-
 
 
 // building html from object in items of cart //
@@ -289,67 +278,6 @@ function findTheCurrency(){
             costButton.append(h1Element);
         }
 
-        // // canadian button click event
-
-        // $(".cadButton").on("click", function(){
-        //     var cadCost = $("<h1>");
-        //     cadCost.text("Your final Order Cost is: " + cadRate +" CAD Canadian Dollars");
-        //     cadCost.attr("class", "cadcost")
-        //     clear();
-        //     costButton.append(cadCost);
-        
-        // });
-
-        // // south african rand cost click event
-
-        // $(".zarButton").on("click", function(){
-        //     var zarCost = $("<h1>");
-        //     zarCost.text("Your final Order Cost is: " + zarRate +" South African Rand");
-        //     zarCost.attr("class", "zarcost");
-        //     clear();
-        //     costButton.append(zarCost);
-        
-        // });
-
-        // // Euro cost click event
-
-        // $(".eurButton").on("click", function(){
-        //     var eurCost = $("<h1>");
-        //     eurCost.text("Your final Order Cost is: " + eurRate +" Euros");
-        //     eurCost.attr("class", "eurcost")
-        //     clear();
-        //     costButton.append(eurCost);
-        // });
-
-        // // YEN cost click event
-
-        // $(".yenButton").on("click", function(){
-        //     var yenCost = $("<h1>");
-        //     yenCost.text("Your final Order Cost is: " + yenRate +" YEN");
-        //     yenCost.attr("class", "yencost")
-        //     clear();
-        //     costButton.append(yenCost);
-        // });
-
-        // // GBP Cost Click Event
-
-        // $(".gbpButton").on("click", function(){
-        //     var gbpCost = $("<h1>");
-        //     gbpCost.text("Your final Order Cost is: " + gbpRate +" GBP");
-        //     gbpCost.attr("class", "gbpcost")
-        //     clear();
-        //     costButton.append(gbpCost);
-        // });
-
-        // // CHF Swiss Franc Cost Event
-
-        // $(".chfButton").on("click", function(){
-        //     var chfCost = $("<h1>");
-        //     chfCost.text("Your final Order Cost is: " + chfRate +" CHF");
-        //     chfCost.attr("class", "gbpcost");
-        //     clear();
-        //     costButton.append(chfCost);
-        // });
 
     });
 }
