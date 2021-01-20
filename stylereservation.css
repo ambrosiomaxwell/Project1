@@ -178,6 +178,14 @@ textarea{
     text-align: center;
 }
 
+.cartHeading{
+    text-align: center;
+}
+
+.cartItem1{
+    text-align: center;
+}
+
 /* class for button click of joke */
 
 .newButtonApp{
